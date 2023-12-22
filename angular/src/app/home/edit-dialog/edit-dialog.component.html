@@ -1,0 +1,44 @@
+<h1 mat-dialog-title>Edit</h1>
+    <form>
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label for="inputFullName4">Name</label>
+                <input type="text" class="form-control" id="inputFullName4" [value]="selectedEntry.name">
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="inputEmail4">phoneNumber </label>
+                <input type="email" class="form-control" id="inputEmail4" [value]="selectedEntry.phoneNumber" >
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label for="inputMobileNumber4">accountNumber</label>
+                <input type="text" class="form-control" id="inputMobileNumber4" [value]="selectedEntry.accountNumber">
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="inputAddress4">isPaid </label>
+                <input type="text" class="form-control" id="inputAddress4" [value]="selectedEntry.isPaid">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label for="inputage">debtAmount</label>
+                <input type="text" class="form-control" id="inputage" [value]="selectedEntry.debtAmount">
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="inputDate">isActive </label>
+                <input type="text" class="form-control" id="inputDate" [value]="selectedEntry.isActive">
+            </div>
+        </div>       
+    </form>
+
+<div mat-dialog-actions>
+  <button mat-raised-button color="primary" (click)="onUpdate()">Ok</button>
+  <button mat-raised-button color="warn" (click)="onClose()">Cancel</button>
+</div>
