@@ -1,44 +1,46 @@
 <h1 mat-dialog-title>Add Customer</h1>
-    <form [formGroup]="entryForm">
-        <div class="row">
-            <div class="form-group col-md-6">
-                <label for="input1">Name</label>
-                <input type="text" class="form-control" id="input1" formControlName="input1">
-            </div>
-
-            <div class="form-group col-md-6">
-                <label for="input2">phoneNumber </label>
-                <input type="email" class="form-control" id="input2" formControlName="input2" >
-            </div>
+<form [formGroup]="entryForm">
+    <div class="row">
+        <div class="form-group col-md-6">
+            <label for="input1">Name</label>
+            <input type="text" class="form-control" id="input1" formControlName="input1">
         </div>
 
+        <div class="form-group col-md-6">
+            <label for="input2">phoneNumber</label>
+            <input type="text" class="form-control" id="input2" formControlName="input2">
+        </div>
+    </div>
 
-        <div class="row">
-            <div class="form-group col-md-6">
-                <label for="input3">accountNumber</label>
-                <input type="text" class="form-control" id="input3" formControlName="input3">
-            </div>
-
-            <div class="form-group col-md-6">
-                <label for="input4">isPaid </label>
-                <input type="text" class="form-control" id="input4" formControlName="input4">
-            </div>
+    <div class="row">
+        <div class="form-group col-md-6">
+            <label for="input3">accountNumber</label>
+            <input type="text" class="form-control" id="input3" formControlName="input3">
         </div>
 
-        <div class="row">
-            <div class="form-group col-md-6">
-                <label for="input5">debtAmount</label>
-                <input type="text" class="form-control" id="input5" formControlName="input5" >
-            </div>
+        <div class="form-group col-md-6">
+            <label for="input4">isPaid</label>
+            <select class="form-control" id="input4" formControlName="input4">
+              <option value="" disabled selected>Choose</option>
+              <option *ngFor="let option of isPaidOptions" [value]="option">{{ option }}</option>
+            </select>
+          </div>
+    </div>
 
-            <div class="form-group col-md-6">
-                <label for="input6">isActive </label>
-                <input type="text" class="form-control" id="input6" formControlName="input6">
-            </div>
-        </div>       
-    </form>
+    <div class="row">
+        <div class="form-group col-md-6">
+            <label for="input5">debtAmount</label>
+            <input type="text" class="form-control" id="input5" formControlName="input5">
+        </div>
+
+        <div class="form-group col-md-6">
+            <label for="input6">isActive</label>
+            <input type="text" class="form-control" id="input6" formControlName="input6">
+        </div>
+    </div>
+</form>
 
 <div mat-dialog-actions>
-  <button mat-raised-button color="primary" (click)="onAdd()">Ok</button>
-  <button mat-raised-button color="warn" (click)="onClose()">Cancel</button>
+  <button class="btn btn-primary"  (click)="onAdd()">Ok</button>
+  <button class="btn btn-sm btn-danger"  (click)="onClose()">Cancel</button>
 </div>

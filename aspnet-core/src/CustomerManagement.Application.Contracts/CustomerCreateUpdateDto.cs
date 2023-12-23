@@ -9,7 +9,7 @@ namespace CustomerManagement
         public string Name { get; set; } = string.Empty;
         public string? AccountNumber { get; set; }
         public decimal DebtAmount { get; set; }
-        public bool IsPaid { get; set; }
+        public string? IsPaid { get; set; }
         public string? PhoneNumber { get; set; }
         public bool IsActive { get; set; }
     }

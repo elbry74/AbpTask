@@ -3,7 +3,7 @@ export interface CustomerCreateUpdateDto {
   name?: string;
   accountNumber?: string;
   debtAmount: number;
-  isPaid: boolean;
+  isPaid?: string;
   phoneNumber?: string;
   isActive: boolean;
 }
@@ -13,7 +13,7 @@ export interface CustomerDto {
   name?: string;
   accountNumber?: string;
   debtAmount: number;
-  isPaid: boolean;
+  isPaid?: string;
   phoneNumber?: string;
   isActive: boolean;
 }

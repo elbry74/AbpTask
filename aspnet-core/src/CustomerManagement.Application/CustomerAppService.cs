@@ -41,7 +41,7 @@ namespace CustomerManagement
                 AccountNumber = input.AccountNumber,
                 DebtAmount = input.DebtAmount,
                 IsPaid = input.IsPaid,
-                IsActive = input.IsActive
+                IsActive = false
             };
 
             newItem = await _customerRepository.InsertAsync(newItem);

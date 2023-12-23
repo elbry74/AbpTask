@@ -11,7 +11,7 @@
       <div class="action-btns  text-center ">
           <div class="row">
               <div class="col-lg-6  col-sm-6 col-md-6">
-                <button class="btn btn-primary" (click)="openAddDialog()">Add New Entry</button>
+                <button class="btn btn-primary" (click)="openAddDialog()">Add New Customer</button>
               </div>
           </div>
       </div>
@@ -44,20 +44,19 @@
                       <td>{{ CustomerItem.accountNumber}}</td>
                       <td>{{ CustomerItem.debtAmount}}</td>
                       <td>{{ CustomerItem.isPaid}}</td>
-                      <td>{{ CustomerItem.isActive}}</td>
-
-
-                   
+                      <td>
+                        <button [ngClass]="{'btn-success': CustomerItem.isActive, 'btn-danger': !CustomerItem.isActive}" 
+                                class="btn btn-sm" (click)="toggleActive(CustomerItem.id, CustomerItem.isActive)">
+                          {{ CustomerItem.isActive ? 'Activated' : 'Deactivated' }}
+                        </button>
+                      </td>
 
                           <td >
                               <div class="row">
-                                <div class="col-4">
-                                  <button class="btn btn-sm btn-danger">Active</button>
-                                </div>
-                                <div class="col-4">
+                                <div class="col-6">
                                   <button class="btn btn-sm btn-info" (click)="openEditDialog(CustomerItem.id)">Edit</button>
                                 </div>                                  
-                                  <div class="col-4 ">
+                                  <div class="col-6">
                                     <button class="btn btn-sm btn-danger" (click)="deleteEntry(CustomerItem.id)">Delete</button>
                                   </div>
 

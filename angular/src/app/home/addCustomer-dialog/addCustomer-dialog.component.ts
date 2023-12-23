@@ -10,6 +10,8 @@ import { CustomerCreateUpdateDto, CustomerService } from '@proxy';
 })
 export class AddCustomerDialogComponent implements OnInit {
   entryForm: FormGroup;
+  isPaidOptions: string[] = ['Paid', 'Not Paid'];
+  
   constructor(
     public dialogRef: MatDialogRef<AddCustomerDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: { entry: CustomerCreateUpdateDto },
